@@ -1,7 +1,7 @@
 <script>
 export default {
   middleware({ redirect }) {
-    return redirect('/dashboard/courses')
+    // return redirect('/dashboard/courses')
   }
 }
 </script>

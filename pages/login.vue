@@ -41,7 +41,7 @@ export default {
       this.creatingCourse = true;
       
       setInterval(() => {
-        this.$router.push("/dashboard")
+        this.$router.push("/dashboard/courses")
       },700);
 
     },
