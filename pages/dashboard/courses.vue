@@ -12,16 +12,16 @@
           <th>Tips</th> -->
         </tr>
       </thead>
-      <tbody>
-        <tr v-for="n of 10" :key="n">
-          <td>
-            CSC 102
+      <tbody v-if="courses.length > 2">
+        <tr v-for="course of courses" :key="`course-${course.id}`">
+          <td class="font-bold uppercase">
+            {{ course.name }}
           </td>
           <td>
-            Introduction to Computing
+            {{ course.title.split('\n')[0].slice(0, 20) }}
           </td>
           <td>
-            https://drive.goog
+            {{ course.textbook.slice(0, 20) }}
           </td>
           <td>
             
@@ -32,10 +32,10 @@
           <td>
             Pay attention in classes
           </td> -->
-        </tr>
+        </tr> 
       </tbody>
     </table>
-    <button class="flex fixed bottom-10 right-12 shadow-xl items-center justify-center space-x-3 !rounded-full cta green hover:!bg-dark">
+    <button @click="addCourse()" class="flex fixed bottom-10 right-12 shadow-xl items-center justify-center space-x-3 !rounded-full cta green hover:!bg-dark">
       <svg aria-hidden="true" width="25" fill="#fff" focusable="false" data-prefix="fas" data-icon="plus" class="inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
       <span>Add Course</span>
     </button>
@@ -52,11 +52,21 @@ export default {
   },
   data() {
     return {
-      courses: []
+      
     }
   },
-  mounted() {
-    this.courses = this.$axios.get('/ada/list').then(res => res.data)
+  computed: {
+    courses() {
+      return this.$store.state.courses;
+    }
+  },
+  methods: {
+    convertCode(code) {
+      return code.slice(0, 3)
+    },
+    addCourse() {
+      this.$store.commit("updateModal", true)
+    }
   }
 }
 </script>

@@ -24,7 +24,7 @@ export default {
   }
 
   .cta {
-    @apply transition duration-300 ease-in-out transform inline-block px-8 py-[.9rem] rounded-[1rem] bg-yellow text-white;
+    @apply outline-none transition duration-300 ease-in-out transform inline-block px-8 py-[.9rem] rounded-[1rem] bg-yellow text-white;
   }
 
   .cta:hover {
@@ -44,11 +44,24 @@ export default {
     background: none;
   }
 
+  .cta:focus {
+    @apply ring-8 ring-yellow ring-opacity-30;
+  }
+
+  .cta.green {
+    @apply ring-green ring-opacity-30;
+  }
+
   h1 {
     @apply font-serif;
   }
 
   h1 {
     font-size: 10rem;
+  }
+
+  h2 {
+    @apply font-bold;
+    font-size: 3rem;
   }
 </style>
