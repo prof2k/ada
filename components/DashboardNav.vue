@@ -4,9 +4,9 @@
       <img src="~assets/logo-white.svg" width="120" alt="" class="mx-auto">
     </nuxt-link>
     <nav class="flex flex-col flex-grow space-y-5 justify-items-center">
-      <nuxt-link to="courses" class="text-center cta white">Courses</nuxt-link>
-      <nuxt-link to="collaborators" class="text-center cta white">Collaborators</nuxt-link>
-      <nuxt-link to="analytics" class="text-center cta white">Analytics</nuxt-link>
+      <nuxt-link to="/dashboard/courses" class="text-center cta white">Courses</nuxt-link>
+      <nuxt-link to="/dashboard/collaborators" class="text-center cta white">Collaborators</nuxt-link>
+      <nuxt-link to="/dashboard/analytics" class="text-center cta white">Analytics</nuxt-link>
     </nav>
     <footer>
       <p class="text-center">Ada v1.0</p>
