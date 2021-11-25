@@ -5,8 +5,9 @@
         <img src="~assets/logo.svg" width="80" alt="">
       </nuxt-link>
       <nav>
-        <nuxt-link to="/login" class="cta empty bg-empty yellow">Login</nuxt-link>
-        <nuxt-link to="/signin" class="cta green">Signin</nuxt-link>
+        <nuxt-link to="/how-it-works" class="cta empty bg-empty yellow">How it Works</nuxt-link>
+        <nuxt-link to="/signup" class="cta empty bg-empty yellow">Signup</nuxt-link>
+        <nuxt-link to="/login" class="cta green">Login</nuxt-link>
       </nav>
     </div>
   </header>
@@ -14,7 +15,6 @@
 
 <script>
 export default {
-
 }
 </script>
 

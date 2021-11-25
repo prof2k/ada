@@ -13,6 +13,9 @@ export default {
 </script>
 
 <style>
+  :root {
+    font-size: 17px;
+  }
   body {
     @apply font-mono text-dark;
   }
@@ -21,11 +24,19 @@ export default {
   }
 
   .cta {
-    @apply inline-block px-8 py-[.9rem] rounded-[1rem] bg-yellow text-white;
+    @apply transition duration-300 ease-in-out transform inline-block px-8 py-[.9rem] rounded-[1rem] bg-yellow text-white;
+  }
+
+  .cta:hover {
+    @apply scale-105;
   }
 
   .cta.green {
     @apply bg-green;
+  }
+
+  .cta.white {
+    @apply bg-white text-dark;
   }
 
   .cta.empty.yellow {
@@ -38,6 +49,6 @@ export default {
   }
 
   h1 {
-    font-size: 9rem;
+    font-size: 10rem;
   }
 </style>
