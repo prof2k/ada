@@ -1,20 +1,12 @@
 <template>
   <div class="py-16 mb-16 space-y-5 overflow-auto">
-    <h2 class="text-center">Welcome Back</h2>
-    <div id="create" class="box-content block max-w-md p-10 mx-auto bg-white shadow-2xl rounded-3xl">
-      <form @submit.prevent="login()" class="space-y-5">
-        <div class="space-y-5 inputs">
-          <div>
-            <label>Username</label>
-            <input required v-model="code" type="text">
-          </div>
-          <div>
-            <label>password</label>
-            <input required v-model="title" type="password">
-          </div>
-        </div>
-        <div class="flex justify-center pt-10">
-          <button class="cta">Login <span class="inline-block duration-300 ease-in-out transform" :class="{rocket: creatingCourse}">🚀</span></button>
+    <h2 class="text-center">Come Join Us</h2>
+    <p class="max-w-md mx-auto text-center">We are still building Ada, and we'll love it if you could join our us while in beta.</p>
+    <div id="create" class="box-content block max-w-md p-10 mx-auto bg-white rounded-3xl">
+      <form @submit.prevent="login()" class="">
+        <div class="flex items-center justify-center inputs">
+          <input placeholder="Your Email" required v-model="code" class="!rounded-r-none" type="text">
+          <button class="!rounded-l-none cta">Login <span class="inline-block duration-300 ease-in-out transform" :class="{rocket: creatingCourse}">🚀</span></button>
         </div>
       </form>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between w-64 h-screen px-10 py-10 space-y-24 text-white bg-green">
+  <div class="flex flex-col justify-between w-64 h-screen px-10 py-10 space-y-24 text-white dashboard-nav bg-green">
     <nuxt-link to="/" class="bg-none" id="home-link" title="Go to Home">
       <img src="~assets/logo-white.svg" width="120" alt="" class="mx-auto">
     </nuxt-link>

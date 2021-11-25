@@ -48,6 +48,10 @@ export default {
     @apply ring-8 ring-yellow ring-opacity-30;
   }
 
+  .dashboard-nav .cta:focus {
+    @apply ring-white ring-opacity-30;
+  }
+
   .cta.green {
     @apply ring-green ring-opacity-30;
   }
