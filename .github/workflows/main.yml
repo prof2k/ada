@@ -1,0 +1,19 @@
+# This is a manual workflow to trigger terraform taint / replace on a resource
+name: Terraform Taint
+
+on:
+  workflow_dispatch:
+    inputs:
+      resource_name:
+        description: 'Resource Name'
+        required: true
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Restore Resource
+      run: terraform apply -replace="${{ github.even.inputs.resource_name}}"
+
+    
+
